@@ -26,14 +26,12 @@ VALUES
     ('Sixth Title', 'color', 'Comedy', 'English', 'Peru', 2010),
     ('Fourth Title', 'color', 'Drama', 'Spanish', 'Peru', 1999);
 
-
 -- Problem Statement
 -- Get count of movies of each language in the Adventure or Comedy genre, released after 2000.
 SELECT lang, COUNT(*) as "Comedy or Adventure after 2000"
 FROM Movie
 WHERE (genres='Comedy' or genres='Adventure') and title_year>2000
 GROUP BY lang;
-
 
 -- Database Clean up
 DROP TABLE Movie;
